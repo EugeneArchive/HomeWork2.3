@@ -10,7 +10,7 @@ public class Bicycle extends TransportVehicle implements ServiceTyre{
         return "Bicycle{}"
                 + super.toString();
     }
-
+    @Override
     public void updateTyre() {
         System.out.println("Меняем покрышку");
         }

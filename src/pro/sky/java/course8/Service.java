@@ -1,6 +1,7 @@
 package pro.sky.java.course8;
 
 public class Service implements ServiceTyre, ServiceEngine, ServiceTrailer {
+
     @Override
     public void updateTyre() {
         System.out.println("Меняем покрышку");
