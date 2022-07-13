@@ -1,6 +1,6 @@
 package pro.sky.java.course8;
 
-public class Bicycle extends TransportVehicle implements ServiceTyre{
+public class Bicycle extends TransportVehicle implements CheckServiceTransport, ServiceTyre{
     public Bicycle(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
@@ -15,5 +15,11 @@ public class Bicycle extends TransportVehicle implements ServiceTyre{
         System.out.println("Меняем покрышку");
         }
 
-
+    @Override
+    public void service() {
+        System.out.println("Обслуживаем " + this.getModelName());
+        for (int i = 0; i < this.getWheelsCount(); i++) {
+            updateTyre();
+        }
+    }
 }
